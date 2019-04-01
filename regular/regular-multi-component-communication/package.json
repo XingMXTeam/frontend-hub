@@ -1,0 +1,12 @@
+{
+  "name": "RegularMultiCompsCommunication",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "browserify src/index.js -o test/bundle.js --debug"
+  },
+  "dependencies": {
+    "browserify": "^16.2.0"
+  }
+}
