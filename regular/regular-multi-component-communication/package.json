@@ -7,6 +7,7 @@
     "build": "browserify src/index.js -o test/bundle.js --debug"
   },
   "dependencies": {
-    "browserify": "^16.2.0"
+    "browserify": "^16.2.0",
+    "cached-path-relative": ">=1.0.2"
   }
 }
