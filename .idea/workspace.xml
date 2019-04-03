@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81c88b2a-8d0d-48b5-8636-7d373cece938" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/i18n/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/i18n/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniProgram/components/index/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniProgram/components/index/index.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniProgram/components/index/index.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniProgram/components/index/index.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniProgram/pages/index/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniProgram/pages/index/index.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniProgram/pages/index/index.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniProgram/pages/index/index.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/1-reactivity/1.1 getter-setter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/1-reactivity/1.1 test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/1-reactivity/1.2 dependency-tracking.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/1-reactivity/1.2 test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/1-reactivity/1.3 mini-observer.js" afterDir="false" />
-    </list>
+    <list default="true" id="81c88b2a-8d0d-48b5-8636-7d373cece938" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -64,16 +44,16 @@
         <counts>
           <entry key="html" value="250" />
           <entry key="js" value="1297" />
-          <entry key="json" value="1" />
-          <entry key="md" value="530" />
+          <entry key="json" value="13" />
+          <entry key="md" value="542" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="250" />
-          <entry key="JSON" value="1" />
+          <entry key="JSON" value="13" />
           <entry key="JavaScript" value="1297" />
-          <entry key="Markdown" value="530" />
+          <entry key="Markdown" value="542" />
         </counts>
       </usages-collector>
     </session>
@@ -81,7 +61,7 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue/1-reactivity/1.1 test.html">
+        <entry file="file://$PROJECT_DIR$/../FrontEndDemos/vue/1-reactivity/1.1 test.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
               <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
@@ -90,12 +70,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue/1-reactivity/1.1 getter-setter.js">
+        <entry file="file://$PROJECT_DIR$/../FrontEndDemos/vue/1-reactivity/1.1 getter-setter.js">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue/1-reactivity/1.2 dependency-tracking.js">
+        <entry file="file://$PROJECT_DIR$/../FrontEndDemos/vue/1-reactivity/1.2 dependency-tracking.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="259">
               <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
@@ -104,7 +84,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue/1-reactivity/1.2 test.html">
+        <entry file="file://$PROJECT_DIR$/../FrontEndDemos/vue/1-reactivity/1.2 test.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
@@ -113,11 +93,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+        <entry file="file://$PROJECT_DIR$/../FrontEndDemos/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="242">
-                <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+              <first_editor relative-caret-position="80">
+                <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
               </first_editor>
               <second_editor />
             </state>
@@ -125,7 +105,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue/1-reactivity/1.3 mini-observer.js">
+        <entry file="file://$PROJECT_DIR$/../FrontEndDemos/vue/1-reactivity/1.3 mini-observer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
@@ -134,7 +114,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/../FrontEndDemos/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="17" selection-start-column="17" selection-end-column="17" />
@@ -143,16 +123,16 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
+        <entry file="file://$PROJECT_DIR$/../FrontEndDemos/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+            <state relative-caret-position="100">
+              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/i18n/app.js">
+        <entry file="file://$PROJECT_DIR$/../FrontEndDemos/i18n/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="80">
               <caret line="4" selection-start-line="4" selection-end-line="4" />
@@ -161,7 +141,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/i18n/index.html">
+        <entry file="file://$PROJECT_DIR$/../FrontEndDemos/i18n/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="2" selection-start-column="2" selection-end-line="12" selection-end-column="7" />
@@ -197,10 +177,11 @@
         <option value="$PROJECT_DIR$/vue/1-reactivity/convert.js" />
         <option value="$PROJECT_DIR$/vue/1-reactivity/1.1 getter-setter.html" />
         <option value="$PROJECT_DIR$/READE.md" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/vue/1-reactivity/1.3 mini-observer.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/../FrontEndDemos/package.json" />
       </list>
     </option>
   </component>
@@ -218,11 +199,11 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
-      <path value="$PROJECT_DIR$/package.json" />
-      <path value="$PROJECT_DIR$/react/react-demo/package.json" />
-      <path value="$PROJECT_DIR$/react/react-event-demo/package.json" />
-      <path value="$PROJECT_DIR$/react/react-observable-demo/package.json" />
-      <path value="$PROJECT_DIR$/regular/regular-multi-component-communication/package.json" />
+      <path value="$PROJECT_DIR$/../FrontEndDemos/package.json" />
+      <path value="$PROJECT_DIR$/../FrontEndDemos/react/react-demo/package.json" />
+      <path value="$PROJECT_DIR$/../FrontEndDemos/react/react-event-demo/package.json" />
+      <path value="$PROJECT_DIR$/../FrontEndDemos/react/react-observable-demo/package.json" />
+      <path value="$PROJECT_DIR$/../FrontEndDemos/regular/regular-multi-component-communication/package.json" />
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
@@ -251,7 +232,7 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
@@ -265,7 +246,7 @@
           <expand>
             <path>
               <item name="fuckDemos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fuckDemos" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontEndDemos" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -310,12 +291,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554111594615</updated>
-      <workItem from="1554111595953" duration="7680000" />
+      <workItem from="1554111595953" duration="7854000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7680000" />
+    <option name="totallyTimeSpent" value="7854000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="111" y="250" width="1545" height="812" extended-state="0" />
@@ -347,32 +328,32 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/miniProgram/components/index/index.wxss">
+    <entry file="file://$PROJECT_DIR$/../FrontEndDemos/miniProgram/components/index/index.wxss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/components/index/index.wxml">
+    <entry file="file://$PROJECT_DIR$/../FrontEndDemos/miniProgram/components/index/index.wxml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/components/index/index.json">
+    <entry file="file://$PROJECT_DIR$/../FrontEndDemos/miniProgram/components/index/index.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/components/index/index.js">
+    <entry file="file://$PROJECT_DIR$/../FrontEndDemos/miniProgram/components/index/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/pages/index/index.wxss">
+    <entry file="file://$PROJECT_DIR$/../FrontEndDemos/miniProgram/pages/index/index.wxss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/pages/index/index.wxml">
+    <entry file="file://$PROJECT_DIR$/../FrontEndDemos/miniProgram/pages/index/index.wxml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/pages/index/index.json">
+    <entry file="file://$PROJECT_DIR$/../FrontEndDemos/miniProgram/pages/index/index.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/miniProgram/pages/index/index.js">
+    <entry file="file://$PROJECT_DIR$/../FrontEndDemos/miniProgram/pages/index/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
@@ -386,72 +367,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/i18n/app.js">
+    <entry file="file://$PROJECT_DIR$/../FrontEndDemos/i18n/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/i18n/index.html">
+    <entry file="file://$PROJECT_DIR$/../FrontEndDemos/i18n/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="2" selection-start-column="2" selection-end-line="12" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/1-reactivity/1.1 test.html">
+    <entry file="file://$PROJECT_DIR$/../FrontEndDemos/vue/1-reactivity/1.1 test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/1-reactivity/1.2 test.html">
+    <entry file="file://$PROJECT_DIR$/../FrontEndDemos/vue/1-reactivity/1.2 test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/1-reactivity/1.2 dependency-tracking.js">
+    <entry file="file://$PROJECT_DIR$/../FrontEndDemos/vue/1-reactivity/1.2 dependency-tracking.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
           <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/1-reactivity/1.1 getter-setter.js">
+    <entry file="file://$PROJECT_DIR$/../FrontEndDemos/vue/1-reactivity/1.1 getter-setter.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="242">
-            <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/1-reactivity/1.3 mini-observer.js">
+    <entry file="file://$PROJECT_DIR$/../FrontEndDemos/vue/1-reactivity/1.3 mini-observer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/../FrontEndDemos/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="17" selection-start-column="17" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/../FrontEndDemos/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="80">
+            <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FrontEndDemos/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        <state relative-caret-position="100">
+          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>

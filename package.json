@@ -1,5 +1,5 @@
 {
-  "name": "fuckdemos",
+  "name": "FrontEndDemos",
   "version": "1.0.0",
   "description": "All my demos are here",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/XingMXTeam/fuckDemos.git"
+    "url": "git+https://github.com/XingMXTeam/FrontEndDemos.git"
   },
   "author": "maomaoxing",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/XingMXTeam/fuckDemos/issues"
+    "url": "https://github.com/XingMXTeam/FrontEndDemos/issues"
   },
-  "homepage": "https://github.com/XingMXTeam/fuckDemos#readme"
+  "homepage": "https://github.com/XingMXTeam/FrontEndDemos#readme"
 }
