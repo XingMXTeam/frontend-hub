@@ -1,0 +1,19 @@
+{
+  "name": "fuckdemos",
+  "version": "1.0.0",
+  "description": "All my demos are here",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XingMXTeam/fuckDemos.git"
+  },
+  "author": "maomaoxing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/XingMXTeam/fuckDemos/issues"
+  },
+  "homepage": "https://github.com/XingMXTeam/fuckDemos#readme"
+}
