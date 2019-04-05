@@ -1,0 +1,57 @@
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script src="./path-to-reg.js"></script>
+<div id="app"></div>
+<script>
+  const Foo = {
+    props: ["id"],
+    template: `<div>foo with id: {{ id }}</div>`
+  };
+
+  const Bar = {
+    template: `<div>bar</div>`
+  };
+
+  const notFound = { template: `<div> not found </div>` };
+
+  const routeTable = {
+    "/foo/:id": Foo,
+    "/bar": Bar
+  };
+  const compiledRoutes = [];
+  Object.keys(routeTable).forEach(key => {
+    const dynamicSegments = [];
+    const regex = pathToRegexp(key, dynamicSegments);
+    const component = routeTable[key];
+    compiledRoutes.push({ component, regex, dynamicSegments });
+  });
+
+  window.addEventListener("hashchange", nil => {
+    app.url = window.location.hash.slice(1);
+  });
+
+  const app = new Vue({
+    el: "#app",
+    data: {
+      url: window.location.hash.slice(1)
+    },
+    render(h) {
+      const path = this.url;
+
+      let componentToRender = notFound;
+      let props = {};
+
+      compiledRoutes.some(route => {
+        const match = route.regex.exec(path);
+        if (match) {
+          componentToRender = route.component;
+          route.dynamicSegments.forEach((segment, index) => {
+            props[segment.name] = match[index + 1];
+          });
+          return true;
+        }
+      });
+
+      return h(componentToRender, { props });
+    }
+  });
+</script>

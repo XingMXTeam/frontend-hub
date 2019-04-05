@@ -1,28 +1,30 @@
 <script src="../node_modules/vue/dist/vue.js"></script>
-
 <script>
-  const state = {
-    curr: null
-  };
-  window.addEventListener("hashChange", () => {
-    const hash = window.location.hash;
-    state.curr = hash;
+  window.addEventListener("hashchange", () => {
+    app.url = window.location.hash.slice(1);
   });
 </script>
 
 <div id="app">
-  <a href="#foo">foo</a>
-  <a href="#bar">bar</a>
+  <component :is="url"></component>
+  <a @click="routeTo('#foo')" href="#foo">foo</a>
+  <a @click="routeTo('#bar')" href="#bar">bar</a>
 </div>
 
 <script>
   const app = new Vue({
     el: "#app",
-    data() {
-      return state;
+    data: {
+      url: "foo"
     },
-    render(h) {
-      return h("div", this.curr ? this.curr : "foo");
+    components: {
+      foo: { template: `<div>foo</div>` },
+      bar: { template: `<div>bar</div>` }
+    },
+    methods: {
+      routeTo(route) {
+        window.location.hash = route;
+      }
     }
   });
 </script>
