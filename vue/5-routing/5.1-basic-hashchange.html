@@ -1,0 +1,28 @@
+<script src="../node_modules/vue/dist/vue.js"></script>
+
+<script>
+  const state = {
+    curr: null
+  };
+  window.addEventListener("hashChange", () => {
+    const hash = window.location.hash;
+    state.curr = hash;
+  });
+</script>
+
+<div id="app">
+  <a href="#foo">foo</a>
+  <a href="#bar">bar</a>
+</div>
+
+<script>
+  const app = new Vue({
+    el: "#app",
+    data() {
+      return state;
+    },
+    render(h) {
+      return h("div", this.curr ? this.curr : "foo");
+    }
+  });
+</script>

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/XingMXTeam/FrontEndDemos/issues"
   },
-  "homepage": "https://github.com/XingMXTeam/FrontEndDemos#readme"
+  "homepage": "https://github.com/XingMXTeam/FrontEndDemos#readme",
+  "devDependencies": {
+    "vue": "^2.6.10"
+  }
 }

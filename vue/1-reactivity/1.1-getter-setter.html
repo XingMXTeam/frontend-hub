@@ -1,0 +1,25 @@
+<script>
+    const convert = function(obj) {
+        Object.keys(obj).forEach(key=> {
+            let internalValue = obj[key]
+            Object.defineProperty(obj, key, {
+                get() {
+                    console.log(`getting key ${key}: ${internalValue}`)
+                    return internalValue
+                },
+                set(newValue) {
+                    console.log(`setting key ${key} to ${newValue}`)
+                    // obj[key] = newValue <- may cause recursive allocate
+                    internalValue = newValue
+                }
+            })
+
+        })
+    }
+</script>
+<script>
+    let obj = { a:'12' }
+    11(obj)
+    obj.a
+    obj.a = 13
+</script>

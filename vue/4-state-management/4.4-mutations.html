@@ -1,0 +1,60 @@
+<script src="../node_modules/vue/dist/vue.js"></script>
+<div id="app">
+    <counter :count="count"></counter>
+    <counter :count="count"></counter>
+    <counter :count="count"></counter>
+    <button @click="inc">increment</button>
+</div>
+
+<script>
+    function createStore ({ state, mutations }) {
+        return new Vue({
+            data: {
+                state
+            },
+            methods: {
+                commit(mutation) {
+                    mutations[mutation](state)
+                }
+            }
+        })
+    }
+
+    // can be name: userStore productStore
+    // can be used everywhere just import it
+    // this model can be used in medium size App
+    // you can extend it in big App
+    const store =  createStore({
+        state: { count: 0 },
+        // must be sync because devtools integration
+        // the time travel feature and we have snapshots of your state whenever a mutation happens.
+        // If you want to take snapshots then it is critical that the mutations be synchronous
+        // because you can compare the before and after immediately after the function is called
+        // async and the actual mutation of your code is better separated (that is what VueX do)
+
+        // in actions there's a lot more things you can do and it can involve asynchronously.
+        // inside actions you can do a lot of things like calling to external APIs,
+        // whereas your mutations will be focused just on dealing just with the state
+        mutations: {
+            inc(state) {
+                state.count++
+            }
+        }
+    })
+
+    const Counter = {
+        render: h => h('div', store.state.count)
+    }
+
+    new Vue({
+        el: '#app',
+        components: {
+            Counter
+        },
+        methods: {
+            inc() {
+                store.commit('inc')
+            }
+        }
+    })
+</script>

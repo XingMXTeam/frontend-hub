@@ -1,0 +1,35 @@
+<script>
+    /**
+     * toggle two components
+     */
+</script>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<div id="app">
+    <example :ok="ok"></example>
+    <button @click="ok = !ok"></button>
+</div>
+<script>
+    const Foo = {
+        render: h => h('div', 'foo')
+    }
+
+    const Bar = {
+        render: h => h('div', 'bar')
+    }
+
+    // a functional component inside a parent component, this functional component's render
+    // function will be invoked eagerly inside that parent(root?) component's render function
+    Vue.component('example', {
+        functional: true,// no `this` and no state, just function
+        render: (h, context) => h(context.props.ok ? Foo : Bar)
+    })
+
+    new Vue({
+        el: '#app',
+        data: {
+            ok: true
+        }
+    })
+
+</script>

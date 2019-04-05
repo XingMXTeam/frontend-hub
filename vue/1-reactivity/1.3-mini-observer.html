@@ -1,0 +1,93 @@
+
+<script>
+    /**
+     *
+     * 1. 'observe()' converts the properties in the received object and make them reactive.
+     *     For Each converted property, it gets assigned a 'Dep' instance which keeps track
+     *     of a list of subscribing update functions, and triggers them to re-run when its
+     *     setter is invoked.
+     *
+     * 2. 'autorun()' takes an update function and re-runs it when properties that the update
+     *     function subscribes to have been mutated. An update function is said to be "subscribing"
+     *     to a property if it relies on that property during its evaluation.
+     *
+     * todo:  render functions are essentially the other half of the puzzle
+     *        that completes the whole reactivity rendering system in vue itself
+     *
+     *        vue template is compiled to render function under the hood(in build process?)
+     */
+</script>
+<script>
+    const observe = function(obj) {
+        Object.keys(obj).forEach(key=> {
+            let internalValue = obj[key]
+            let dep = new Dep()
+            Object.defineProperty(obj, key, {
+                get() {
+                    dep.depend()
+                    return internalValue
+                },
+                set(newValue) {
+                    const isChanged = internalValue !== newValue
+                    if(isChanged) {
+                        internalValue = newValue
+                        dep.notify()
+                    }
+                }
+            })
+
+        })
+    }
+
+    class Dep {
+        constructor() {
+            this.subscribers = new Set()
+        }
+        depend() {
+            if(activeUpdate) {
+                // register the subscriber
+                this.subscribers.add(activeUpdate)
+            }
+        }
+        notify() {
+            // run all the subscribers
+            this.subscribers.forEach(sub => sub())
+        }
+    }
+
+    let activeUpdate
+
+    // This is essentially a basic form of dependency tracking that's commonly shared
+    // in Knockout.js, Meteor Tracker, and Vue.js and MobX.
+    // MobX is a state management pattern for React.
+    const autorun = function (update) {
+        // wrapper update aimed to rerun it in notify method of Dep class
+        function wrapperUpdate() {
+            activeUpdate = wrapperUpdate
+            update()
+            activeUpdate = null
+        }
+        wrapperUpdate()
+    }
+</script>
+<script>
+    const state = {
+        count: 0    
+    }
+
+    // a watcher ?
+    observe(state)
+
+    //  onaChanged or onStateChanged, declarative
+    //  somehow, initial render() with template language return virtual dom then update the DOM
+    autorun(() => {
+        console.log(state.count);
+        // render()
+    })
+    // will log '0'
+
+    // in react, use setState() to replace old state
+    state.count++
+    // will log '1'
+
+</script>

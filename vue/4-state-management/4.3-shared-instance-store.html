@@ -1,0 +1,37 @@
+<script src="../node_modules/vue/dist/vue.js"></script>
+<div id="app">
+    <counter :count="count"></counter>
+    <counter :count="count"></counter>
+    <counter :count="count"></counter>
+    <button @click="inc">increment</button>
+</div>
+
+<script>
+    // state => store like MobX
+    const state =  new Vue({
+        data: {
+            count: 0
+        },
+        methods: {
+            inc() {
+                this.count++
+            }
+        }
+    })
+
+    const Counter = {
+        render: h => h('div', state.count)
+    }
+
+    new Vue({
+        el: '#app',
+        components: {
+            Counter
+        },
+        methods: {
+            inc() {
+                state.inc()
+            }
+        }
+    })
+</script>

@@ -1,0 +1,53 @@
+<script>
+    /**
+     *
+     * when you modified you innerComponent, it will not affect the parent component
+     *
+     *
+     */
+</script>
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    // mock API
+    const fetchURL = function (username, cb) {
+        setTimeout(() => {
+            cb('https://avatars3.githubusercontent.com/u/6128107?v=4&s=200')
+        }, 500)
+    }
+
+    const withAvatarURL = function(innerComponent) {
+        // return a Vue high-order component, you don't need to use Vue.component to declarative
+        return {
+            props: {
+                username: String
+            },
+            data() {
+                return {
+                    url: 'http://via.placeholder.com/200x200'
+                }
+            },
+            created() {
+                fetchURL(this.username, (url) => { this.url = url })
+            },
+            render(h) {
+                return h(innerComponent, { props: { src: this.url }})
+            }
+        }
+    }
+
+    // a component is just a object
+    const Avatar = {
+        props: ['src'],
+        template: `<img :src="src">`
+    }
+
+</script>
+<script>
+    const SmartAvatar = withAvatarURL(Avatar)
+
+    new Vue({
+        el: '#app',
+        components: { SmartAvatar }
+    })
+
+</script>

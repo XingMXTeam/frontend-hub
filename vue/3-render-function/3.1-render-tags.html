@@ -1,0 +1,60 @@
+<script>
+    /**
+     * vitual dom:
+     *
+     * vm.$createElement return a javascript object which
+     * represents the node(div)
+     *
+     * {
+     *     data: "",
+     *     children: [...]
+     * }
+     *
+     * solves the problems that operate original dom is heavy than pure object
+     * and also can be used in server-side, react-native
+     *
+     */
+
+
+
+</script>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<div id="app">
+    <!--
+     component is an abstract placeholder
+     what it really render is up to render function
+     -->
+    <example :tags="['h1', 'h2', 'h3']"></example>
+</div>
+<script>
+    // register a vue component
+    Vue.component("example", {
+        props: ['tags'],//optional
+        // generate/return virtual dom
+        // render function dependent all the data properties, such as this.tags
+        // if any dependence changed, render will be called again
+        // because each component has his own autorun loop
+        // old dom and new dom will be compared and diffed
+        // eventually apply the minimal amount of change to actual dom
+        render(h) {
+            return h('div', this.tags.map((tag, i) => h(tag, i)))
+        }
+    })
+
+    // need babel plugin
+    // const Example = {
+    //     functional: true,
+    //     render: (h, { props: { tags } }) => {
+    //         return <div>{tags.map((tag, i) => h(tag, i)}</div>
+    //     }
+    // }
+    //
+
+    // you can write like this
+    // need a babel plugin: transform vue functional ？
+    // const Example = (h, { props: { tags }}) => tags.map((tag, i) => h(tag, i));
+
+
+    new Vue({ el: '#app' })
+</script>
