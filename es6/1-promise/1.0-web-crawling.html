@@ -1,0 +1,48 @@
+<div>
+    Web crawling
+    There is one page on the domain http://marijnhaverbeke.nl that contains the word “Piranha”. It is linked from the
+    domain's top page.
+
+    Given this Promise-returning implementation of an HTTP get request, write a simple promise-based “crawler” that
+    first fetches the top page, then uses some crude regexp technique to find linked URLs in that page, and fetches all
+    linked local pages, in parallel. It scans the content of those pages for the word “Piranha”, and logs the address of
+    any matching pages to the console.
+</div>
+<script>
+    function get(url) {
+        return new Promise((succeed, fail) => {
+            var req = new XMLHttpRequest()
+            req.open("GET", url, true)
+            req.addEventListener("load", () => {
+                if (req.status < 400)
+                    succeed(req.responseText)
+                else
+                    fail(new Error("Request failed: " + req.statusText))
+            })
+            req.addEventListener("error", () => {
+                fail(new Error("Network error"))
+            })
+            req.send(null)
+        })
+    }
+
+    get('https://marijnhaverbeke.nl').then(response => {
+        //response = '<a href="http://twitter.com/marijnjh">twitter</a><a href="https://marijnhaverbeke.nl/fund/">fund</a>'
+        let reg = new RegExp("href=\"(https?://.*?)\"", "gmi")
+        while (match = reg.exec(response)) {
+            let url = match[1]
+            if (/^https?:\/\/marijnhaverbeke.nl/.test(url)) {
+                console.log(url)
+                // 一次性可能发出很多个请求
+                get(url).then(res => {
+                    if (/Piranha/.test(res)) {
+                        console.log(url)
+                    }
+                })
+            }
+
+        }
+    }, err => {
+        console.log(err)
+    })
+</script>

@@ -1,0 +1,17 @@
+<script src="../node_modules/vue/dist/vue.js"></script>
+<div id="app">
+    {{message}}
+</div>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            message: 1231
+        }
+    })
+    vm.message = 'changed'
+    console.log(vm.$el.textContent);
+    Vue.nextTick(function () {
+        console.log(vm.$el.textContent);
+    })
+</script>

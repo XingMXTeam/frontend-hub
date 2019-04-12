@@ -1,0 +1,26 @@
+<div>
+    Function compose
+    Define a symbol compose, and add it to Function.prototype, with a method that composes the this function with the
+    method's argument, returning a new function that applies both composed functions, one after the other, to its
+    argument, and returns the result.
+</div>
+
+<script>
+    // Your code here
+
+    let compose = Symbol('compose')
+
+    Object.defineProperty(Function.prototype, compose, {
+        value: function (fn) {//Math.abs
+            let _this = this//Math.round
+            return function (val) {
+                return _this(fn(val))
+            }
+        }
+    })
+
+    let roundedAbs = Math.round[compose](Math.abs)
+    console.log(roundedAbs(-5.5))
+// → 6
+
+</script>

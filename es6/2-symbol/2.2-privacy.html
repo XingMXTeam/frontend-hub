@@ -1,0 +1,26 @@
+<div>
+    Privacy
+    Change the Queue class to use a symbol instead of an underscore-prefixed property name for the private content
+    property.
+</div>
+<script>
+    let s = Symbol['content'];
+    class Queue {
+        constructor() {
+            this[s] = []
+        }
+        put(elt) {
+            return this[s].push(elt)
+        }
+        take() {
+            return this[s].shift()
+        }
+    }
+
+    let q = new Queue
+    q.put(1)
+    q.put(2)
+    console.log(q.take())
+    console.log(q.take())
+
+</script>

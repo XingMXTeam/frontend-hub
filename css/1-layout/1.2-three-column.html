@@ -1,0 +1,25 @@
+<style>
+    /* flex */
+    #app {
+        display: flex;
+    }
+
+    .column {
+        flex: 1;
+        height: 200px;
+        background: red;
+    }
+
+    .column:first-child {
+        background: blue;
+    }
+
+    .column:last-child {
+        background: yellow;
+    }
+</style>
+<div id="app">
+    <div class="column">1</div>
+    <div class="column">2</div>
+    <div class="column">3</div>
+</div>

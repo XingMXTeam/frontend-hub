@@ -1,0 +1,36 @@
+<div>
+    Take N
+    The integers function creates an infinite iterator, that keeps on producing integers forever.
+
+    Implement the take function, which wraps an iterator in another iterator, but cutting it off after n elements.
+</div>
+<script>
+    // 返回一个迭代器
+    function integers() {
+        let i = 0
+        return {
+            next() { return { value: i++ } },
+            [Symbol.iterator]() { return this }
+        }
+    }
+
+    function take(n, iter) {
+        let done = false
+        let c = 1
+        return {
+            next() {
+                if (c++ > n) done = true
+                let value = iter.next().value
+                return Object.assign({ done }, { value })
+            },
+            [Symbol.iterator]() { return this }
+        }
+    }
+
+    for (let elt of take(4, integers()))
+        console.log(elt)
+// → 0
+//   1
+//   2
+
+</script>

@@ -1,0 +1,50 @@
+<div>
+    Async generators
+    In exercise Promises.1, we wrote a simple web crawler using promises (get the content of http://marijnhaverbeke.nl,
+    fetch the content of all local links, search for the word “Piranha”). Do this again, using the drive function from
+    the slides and a generator function. Don't worry about making the requests in parallel this time.
+</div>
+<script>
+    // 一次一个请求
+    drive(function* () {
+        let res = yield get('https://marijnhaverbeke.nl')
+        let reg = new RegExp("href=\"(https?://.*?)\"", "gmi")
+        while (match = reg.exec(res)) {
+            let url = match[1]
+            if (/^https?:\/\/marijnhaverbeke.nl/.test(url)) {
+                let res2 = yield get(url)
+                if (/Piranha/.test(res2)) {
+                    console.log(url)
+                }
+            }
+        }
+    })
+
+    function drive(generator) {
+        let iterator = generator()
+        function resume(result) {
+            if (result.done) return
+            result.value.then(
+                value => resume(iterator.next(value)),
+                error => resume(iterator.throw(error)))
+        }
+        resume(iterator.next())
+    }
+
+    function get(url) {
+        return new Promise((succeed, fail) => {
+            var req = new XMLHttpRequest()
+            req.open("GET", url, true)
+            req.addEventListener("load", () => {
+                if (req.status < 400)
+                    succeed(req.responseText)
+                else
+                    fail(new Error("Request failed: " + req.statusText))
+            })
+            req.addEventListener("error", () => {
+                fail(new Error("Network error"))
+            })
+            req.send(null)
+        })
+    }
+</script>

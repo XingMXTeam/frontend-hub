@@ -1,0 +1,23 @@
+<div>
+    Take N again
+    Redo exercise Iterators.2 using a generator.
+</div>
+<script>
+    function* integers() {
+        for (let i = 0; ; i++) yield i
+    }
+
+    function* take(n, iter) {
+        let count = 0;
+        while (count++ < n) {
+            yield iter.next().value
+        }
+    }
+
+    for (let elt of take(3, integers()))
+        console.log(elt)
+// → 0
+//   1
+//   2
+
+</script>

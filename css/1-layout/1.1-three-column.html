@@ -1,0 +1,28 @@
+<style>
+    /* float */
+    .column {
+        width: 33.3333%;
+
+        /* demo use */
+        height: 200px;
+        background: red;
+        display: inline-block;
+    }
+
+    .column:first-child {
+        float: left;
+        /* demo use */
+        background: blue;
+    }
+
+    .column:last-child {
+        float: right;
+        /* demo use */
+        background: yellow;
+    }
+</style>
+<div id="app">
+    <div class="column">1</div>
+    <div class="column">2</div>
+    <div class="column">3</div>
+</div>

@@ -1,9 +1,8 @@
 <script src="../node_modules/vue/dist/vue.js"></script>
 <div id="app">
-    <counter :count="count"></counter>
-    <counter :count="count"></counter>
-    <counter :count="count"></counter>
-    <button @click="count++">increment</button>
+    <!-- <counter :count="count"></counter> -->
+    <!-- {{count}}
+    <button @click="count++">increment</button> -->
 </div>
 <script>
     new Vue({
@@ -11,13 +10,14 @@
         data: {
             count: 0
         },
-        components: {
-            Counter: {
-                props: {
-                    count: Number
-                },
-                template: `<div>{{ count }}</div>`
-            }
-        }
+        template: `<div>{{count}}<button @click="count++">increment</button></div>`
+        // components: {
+        //     Counter: {
+        //         props: {
+        //             count: Number
+        //         },
+        //         template: `<div>{{ count }}</div>`
+        //     }
+        // }
     })
 </script>

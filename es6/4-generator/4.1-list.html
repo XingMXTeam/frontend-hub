@@ -1,0 +1,33 @@
+<div>
+    List iterator
+    Make the List class (a linked list implementation) iterable by adding a [Symbol.iterator] method.
+
+    (Remember: an iterator is an object with a next method that returns {value, done} objects.)
+</div>
+<script>
+    class List {
+        constructor(head, tail) {
+            this.head = head
+            this.tail = tail
+        }
+        *[Symbol.iterator]() {
+            let next = this.tail
+            yield this.head
+            while (next) {
+                yield next.head
+                next = next.tail
+            }
+        }
+        map(f) {
+            return new List(f(this.head), this.tail && this.tail.map(f))
+        }
+    }
+
+    let list = new List("x", new List("y", new List("z", null)))
+
+    for (let elt of list) console.log(elt)
+    // → x
+    //   y
+    //   z
+
+</script>
