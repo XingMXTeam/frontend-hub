@@ -1,0 +1,8 @@
+<span class="ux-btn {stateClazz} ux-btn-{size} ux-btn-{width} {class}" on-click={this.click($event)}
+    data-log-act={log.act} data-log-data={log.data}>
+    {#if value}
+    {value}
+    {#else}
+    {#inc this.$body}
+    {/if}
+</span>
