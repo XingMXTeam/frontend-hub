@@ -1,0 +1,20 @@
+<style>
+    #btn:active {
+        background: red
+    }
+</style>
+<div id="div">
+    <a href="" id="btn">按钮</a>
+</div>
+<script>
+    // active失效
+    let button = document.getElementById('btn')
+    button.addEventListener('mousedown', function (event) {
+        event.preventDefault()
+    })
+
+    // a button 按下Tab 键可以被focus 称为焦点元素
+    // 非焦点元素指未设置tabindex属性的元素
+
+    // ie6\7 对非焦点元素设置active无效
+</script>

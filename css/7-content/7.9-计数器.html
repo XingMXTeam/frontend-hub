@@ -1,0 +1,35 @@
+<p>我叫王小二，字如其名，下面要出现的数字是：</p>
+<p class="counter"></p>
+
+<style>
+    .counter {
+        counter-reset: wangxiaoer 2;
+        /* 增加 */
+        counter-increment: wangxiaoer;
+        font-size: 32px;
+        font-family: Arial Black;
+        color: #cd0000;
+    }
+
+    .counter:after,
+    .counter:before {
+        content: counter(wangxiaoer);
+        counter-increment: wangxiaoer;
+    }
+
+    /*
+    罗马记数 
+    .counter {
+        counter-reset: wangxiaoer 2;
+        font-size: 32px;
+        font-family: Arial black;
+        color: #cd0000;
+    }
+
+    .counter:before,
+    .counter:after {
+        display: block;
+        content: counter(wangxiaoer, lower-roman);
+        counter-increment: wangxiaoer;
+    } */
+</style>

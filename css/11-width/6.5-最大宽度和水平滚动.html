@@ -1,0 +1,36 @@
+<style>
+    .wrap {
+        width: 300px;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .wrap>ul {
+        position: absolute;
+        white-space: nowrap;
+    }
+
+    .wrap li {
+        display: inline-block;
+    }
+</style>
+<div id="wrap" class="wrap">
+    <ul>
+        <li><img src="1.jpg"></li>
+        <li><img src="1.jpg"></li>
+        <li><img src="1.jpg"></li>
+        <li><img src="1.jpg"></li>
+        <li><img src="1.jpg"></li>
+    </ul>
+</div>
+<script>
+    // img会沾满水平排列下去， 占据最大的宽度 不留空隙
+    // 1 借助原生scrollLeft和scrollTop
+    // 2 根据内部元素的尺寸和容器的关系
+    new IScroll('#wrap', {
+        scrollbars: true,
+        scrollX: true,
+        scrollY: false
+    });
+</script>

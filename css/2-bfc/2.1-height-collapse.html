@@ -1,0 +1,24 @@
+<script>
+    /*
+    为什么会塌陷？
+    因为float 以后就脱离文档流了。
+    */
+</script>
+<style>
+    #child {
+        float: left;
+        height: 100px;
+        width: 100px;
+        background: red;
+    }
+
+    #div {
+        background: blue;
+        padding: 20px;
+        /* 创建了bfc： 告诉了浏览器你想要怎么处理浮动元素 */
+        overflow: hidden;
+    }
+</style>
+<div id="div">
+    <div id="child">dasfdf</div>
+</div>

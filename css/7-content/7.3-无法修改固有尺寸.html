@@ -1,0 +1,30 @@
+<style>
+    /* .app:before {
+        content: url(../asset/1.jpeg);
+        display: block;
+        width: 200px;
+        height: 200px;
+    } */
+    .app {
+        width: 100px;
+        height: 100px;
+        background: blue;
+    }
+
+    img {
+        object-fit: none;
+        width: 20px;
+        height: 100px;
+        background-color: red;
+    }
+</style>
+<div class="app">
+    <img src="../asset/1.jpeg" alt="">
+</div>
+
+<script>
+    // 伪类元素的宽高不是200*200 而是图片的默认尺寸
+    // 200*200仅仅设置了content box尺寸
+    // img的通过css能设置尺寸，是因为替换内容采用了填充的方式
+    // 在css3中可以通过object-fit控制替换内容的尺寸
+</script>

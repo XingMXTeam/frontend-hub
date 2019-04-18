@@ -1,0 +1,26 @@
+<style>
+    .blue,
+    .red-inner {
+        height: 50px;
+        margin: 10px 0;
+    }
+
+    .blue {
+        background: blue;
+    }
+
+    .red-outer {
+        /* 创建bfc: 避免了margin塌陷问题 */
+        overflow: hidden;
+        background: red;
+    }
+</style>
+<div class="blue"></div>
+<div class="red-outer">
+    <div class="red-inner">red inner</div>
+</div>
+<script>
+    /*
+    只会发生在同一bfc的块级元素之间
+    */
+</script>

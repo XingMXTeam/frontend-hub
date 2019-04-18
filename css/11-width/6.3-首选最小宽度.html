@@ -1,0 +1,30 @@
+<div class="box">
+    <span id="conMore" class="content">display:inline-block</span>
+</div>
+<!-- 按钮 -->
+<p><button id="btnMore">更多文字</button></p>
+<style>
+    .box {
+        padding: 10px;
+        background-color: #cd0000;
+        text-align: center;
+        /* 外部宽度为0 内部不可能为0 有最小宽度 */
+        width: 0;
+    }
+
+    .content {
+        display: inline-block;
+        text-align: left;
+        word-break: break-all;
+    }
+</style>
+<script>
+    var btn = document.getElementById('btnMore'),
+        content = document.getElementById('conMore');
+
+    if (btn && content) {
+        btn.onclick = function () {
+            content.innerHTML += '-新增文字';
+        };
+    }
+</script>

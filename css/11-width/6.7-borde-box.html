@@ -1,0 +1,35 @@
+<script>
+    // search类型的input默认是border-box
+
+    // textarea(input)无法通过设置display: block 让尺寸由外部尺寸决定 因为它是替换元素 所以只能设置宽度来100%自适应
+    // textarea是有border的，而且需要一定的padding 大小。必然要是border-box。
+    // 否则就需要在外面包裹一个div, 但是这样无法focus高亮父级边框
+
+</script>
+
+<style>
+    #parent {
+        width: 200px;
+        background: red;
+    }
+
+    #wrap {
+        padding: 20px;
+        border: 2px solid blue;
+    }
+
+    .txt {
+        width: 100%;
+        content: content-box;
+        /* box-sizing: border-box; 默认的 不需要设置 */
+    }
+
+    .txt:focus {
+        border: 1px solid red;
+    }
+</style>
+<div id="parent">
+    <div id="wrap">
+        <textarea class="txt" name="" id="">dsdafasdff</textarea>
+    </div>
+</div>

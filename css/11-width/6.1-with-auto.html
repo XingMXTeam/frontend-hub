@@ -1,0 +1,31 @@
+<script>
+    // 块级元素:block  存在标记盒子 list-item 
+    // 内联元素:inline
+    // 内联块级元素: inline-block 比如 button img
+
+    // 默认有两个盒子(概念)：外部盒子和内在盒子。 width和height 作用在内在盒子
+    // 内在盒子包括：content box, padding box, border box, margin box不会改变尺寸 所以没有意义
+
+</script>
+<style>
+    #parent {
+        position: relative;
+        width: 20px;
+    }
+
+    table {
+        width: 280px;
+        /* 1 充分利用可用空间 2 收缩与包裹 3 收缩到最小 4 超出容器限制： whitespace: no-wrap */
+        margin: 0 auto;
+        text-align: left;
+    }
+</style>
+<div id='parent'>
+    <table>
+        <tr>
+            <td>就1列就1列就1列就1列就1列</td>
+            <td>当父级relative，且宽度很小的时候，例如{position:relative; width:20px;}，absolute元素也会出现一柱擎天的情况；</td>
+            <td>当父级relative，且宽度很小的时候，例如{position:relative; width:20px;}，absolute元素也会出现一柱擎天的情况；</td>
+        </tr>
+    </table>
+</div>

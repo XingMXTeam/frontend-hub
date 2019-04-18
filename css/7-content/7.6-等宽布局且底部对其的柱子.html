@@ -1,0 +1,50 @@
+<div id="box" class="box"><i class="bar"></i>
+    <i class="bar"></i>
+    <i class="bar"></i>
+    <i class="bar"></i>
+</div>
+
+<style>
+    .box {
+        width: 256px;
+        height: 256px;
+        border-bottom: 1px dashed #ccc;
+        text-align: justify;
+    }
+
+    /* 辅助实现底部对齐 */
+    .box:before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+    }
+
+    /* 辅助实现两端对齐 */
+    .box:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+    }
+
+    .bar {
+        display: inline-block;
+        width: 20px;
+        height: 0;
+    }
+</style>
+
+<script>
+    if (document.querySelector) {
+        var eleBox = document.getElementById('box');
+        // 目前柱子元素和个数
+        var eleBars = document.querySelectorAll('#box > i');
+        var lenBar = eleBars.length;
+        if (eleBox && lenBar) {
+            for (var indexBar = 0; indexBar < lenBar; indexBar += 1) {
+                // 柱形图的柱子高度和背景色随机
+                eleBars[indexBar].style.height = Math.ceil(256 * Math.random()) + 'px';
+                eleBars[indexBar].style.backgroundColor = '#' + (Math.random() + '').slice(-6);
+            }
+        }
+    }
+</script>
