@@ -1,0 +1,31 @@
+<style>
+    .box {
+        overflow: hidden;
+    }
+
+    .full {
+        /* 所以需要100%占据整个屏幕 */
+        width: 100%;
+        /* 变成来块状 不再具有流动性了 */
+        float: left;
+    }
+
+    .full>p {
+        /* 宽度变小 */
+        margin-right: 140px
+    }
+
+    .box>img {
+        float: left;
+        /*  往左128px 因为是浮动元素 所以会自动浮动到上面 */
+        margin-left: -128px;
+        width: 128px;
+        height: 96px;
+    }
+</style>
+<div class="box">
+    <div class="full">
+        <p>wenzi wenzi wenzi wenzi wenzi ...</p>
+    </div>
+    <img src="../asset/1.jpeg" alt="">
+</div>

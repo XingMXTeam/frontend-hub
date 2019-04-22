@@ -1,0 +1,19 @@
+<style>
+    #parent {
+        height: 100px;
+        background: green;
+
+    }
+
+    #child {
+        height: 80px;
+        /* 不会在父元素底部形成100px间距 就像失效了一样
+           margin如果想要影响定位 必须是当前元素方向定位的位置上进行设置
+         */
+        margin-bottom: 100px;
+        background: red;
+    }
+</style>
+<div id="parent">
+    <div id="child"></div>
+</div>

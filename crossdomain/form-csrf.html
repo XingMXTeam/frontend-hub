@@ -1,0 +1,14 @@
+<!-- 不会报跨域问题 -->
+<!-- <form action="https://cp.study.163.com/p/cp/createYunxinAccountByIds.do" method="POST">
+    <input type="text" value="1019403189" name="memberIds">
+    <button type="submit">提交</button>
+</form> -->
+<script>
+    // 会报跨域问题
+    let xml = new XMLHttpRequest
+    // xml.open('POST', 'https://cp.study.163.com/p/cp/createYunxinAccountByIds.do')
+    // let params = JSON.stringify({ "memberIds": 1019403189 })
+    // xml.send(params)
+    xml.open('GET', 'https://study.163.com/j/navi/getMyCouponCount.json')
+    xml.send()
+</script>

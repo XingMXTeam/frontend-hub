@@ -1,0 +1,29 @@
+<style>
+    .father {
+        width: 300px;
+        height: 150px;
+        position: relative;
+        background: blue;
+    }
+
+    .son {
+        /* 格式化高度和宽度，尺寸由父元素决定 
+           也就是会自动填充父级元素
+           这个时候就可以用margin: auto自动计算剩余高度和宽度 
+           进行垂直水平居中
+         */
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        background: red;
+    }
+</style>
+<div class="father">
+    <div class="son"></div>
+</div>

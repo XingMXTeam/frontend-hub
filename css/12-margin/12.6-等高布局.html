@@ -1,0 +1,40 @@
+<style>
+    .box {
+        /* 当需要定位到元素之外的时候，这里有限制 
+           
+        */
+        overflow: hidden;
+    }
+
+    .left,
+    .right {
+        /* 元素的外部尺寸在垂直方向小了9999px */
+        margin-bottom: -9999px;
+        /* 增加元素高度：视觉层上多了可9999px可以使用的的背景色 */
+        padding-bottom: 9999px;
+        /* border-bottom:  9999px solid transparent */
+        width: 200px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .left {
+        background: red;
+    }
+
+    .right {
+        background: blue;
+    }
+</style>
+<div class="box">
+    <div class="left">sdfsa</div>
+    <div class="right">asdf
+        <br>adsfa
+    </div>
+</div>
+
+<!-- 这种方式可能出现的问题： 触发锚点定位和DOM.scrollIntoview()出现问题  -->
+<!-- border和table-cell实现等高布局 
+border： 不支持百分比宽度 因此只支持一侧定宽的布局； 做多三栏
+table-cell: ie8+
+-->

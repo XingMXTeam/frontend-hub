@@ -1,0 +1,17 @@
+<div>
+    <h2>hello world</h2>
+</div>
+<style>
+    div {
+        /* 变成bfc */
+        overflow: hidden;
+        background: url(../asset/1.jpeg) no-repeat center;
+    }
+
+    h2 {
+        /* 头图掉下来了 */
+        margin-top: 20px;
+    }
+
+    /* 跳动问题一般是：添加联overflow:hidden导致margin不合并 间距变大 */
+</style>

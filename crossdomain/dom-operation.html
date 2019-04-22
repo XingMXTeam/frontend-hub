@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <iframe name="yinhang" src="https://study.163.com/member/login.htm"></iframe>
+    <script>
+        const iframe = window.frames['yinhang']
+        iframe.onload = function () {
+            debugger
+            const nodes = iframe.document.querySelector('.j-nameforslide')
+            console.log(`拿到了这个${nodes}，我还拿不到你刚刚输入的账号密码吗`)
+        }
+
+    </script>
+</body>
+
+</html>

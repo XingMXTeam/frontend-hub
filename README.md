@@ -4,31 +4,42 @@
 
 > 罗马不是一天建成的。
 
-Repo for all test demos
+Repo for all test demos. To understand everything in frontend.
 
-## Goal
+## ES6
 
-To understand everything in front end field
-
-## i18n
-
-How to internationalization in your front end application
-
-## miniProgram
-
-mini program dev in wechat environment
-
-## nej
-
-nej is a cross-platform web front end development framework
-used in netease company.
-
-## regular
-
-## reactjs
-
-## rxjs
+* promise
+* symbol
+* iterator
+* generator
+* array
+* class
+* destructuring
+* map
+* reflect
+* set
+* object-literal
+* string
+* arrow
+* template-string
+* block-scope
+* rest-operation
+* spread
+* default-parameters
+* import
+* number
+* object
+* unicode
 
 ## vue
 
 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web
+
+* reactivity
+* plugin
+* render function
+* state management
+* routing
+* form-validation
+* i18n
+* nextTick
