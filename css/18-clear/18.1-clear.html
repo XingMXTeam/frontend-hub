@@ -1,0 +1,23 @@
+<div class="father">
+    　 <img src="zxx.jpg">
+    　 我是帅哥，好巧啊，我也是帅哥，原来看这本书的人都是帅哥~
+</div>
+<div>虽然你很帅，但是我对你不感兴趣。</div>
+<style>
+    .father:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .father img {
+        float: left;
+        width: 60px;
+        height: 64px;
+    }
+
+    /* 导致环绕现象仍存在 */
+    .father+div {
+        margin-top: -2px;
+    }
+</style>

@@ -1,7 +1,6 @@
 // 76: Promise - creation 
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
-
 describe('A promise can be created in multiple ways', function () {
     describe('creating a promise fails when', function () {
         it('using `Promise` as a function', function () {
