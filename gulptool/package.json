@@ -1,0 +1,21 @@
+{
+  "name": "gulptool",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "coverage-report": "./node_modules/.bin/istanbul report --root coverage lcov",
+    "coverage-cmd-report": "./node_modules/.bin/istanbul report --root coverage text-summary",
+    "test": "gulp coverage && mocha-headless-chrome -f coverage.html -o coverage.json -a disable-web-security"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-istanbul": "^1.1.3"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "mocha-headless-chrome": "^2.0.2",
+    "puppeteer": "^1.15.0"
+  }
+}

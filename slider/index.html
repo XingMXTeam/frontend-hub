@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .slider {
+            position: relative;
+            width: 600px;
+            height: 300px;
+            overflow: hidden;
+
+        }
+
+        .slide {
+            position: absolute;
+            width: 600px;
+            height: 300px;
+            /* Add transition */
+            transition: 0.6s ease;
+
+            /* Move slides off to the left by default */
+            transform: translate(-100%, 0);
+        }
+
+        /* Set active slide to be in the viewport */
+        .slide.active {
+            transform: translate(0, 0);
+        }
+
+        /* Use sibling selector to position all slides after the active slide to the right */
+        .slide.active~.slide {
+            transform: translate(100%, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <h1>The Simplest Infinite Slider</h1>
+
+    <div class="slider">
+        <div class="slide active">
+            <h3>Slide One</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, fuga itaque commodi. Quidem facere totam
+                perspiciatis voluptatibus harum obcaecati blanditiis itaque in quos libero architecto, ratione tempore
+                necessitatibus alias quam.</p>
+        </div>
+        <div class="slide">
+            <h3>Slide Two</h3>
+            <p>Illo fugiat earum dicta aliquam eius, iure deserunt neque perspiciatis veniam temporibus unde qui ut
+                voluptates provident dolores nulla, maxime, eveniet quis enim consequatur incidunt cumque cupiditate
+                odio! Cum, praesentium.</p>
+        </div>
+        <div class="slide">
+            <h3>Slide Three</h3>
+            <p>Magnam architecto quisquam recusandae, molestiae rerum, adipisci. Excepturi quo repellendus numquam,
+                nesciunt harum ipsum eaque assumenda dolore, placeat est provident quasi itaque architecto ducimus fugit
+                eveniet eum voluptate rem dolorum.</p>
+        </div>
+        <div class="slide">
+            <h3>Slide Four</h3>
+            <p>Quis voluptatem voluptas alias numquam, soluta ratione dolorem quibusdam culpa voluptates dicta animi
+                enim accusamus libero doloribus laudantium ipsum est nihil ad minus? Est veniam ipsa, optio quaerat
+                aliquam earum.</p>
+        </div>
+        <div class="slide">
+            <h3>Slide Five</h3>
+            <p>Mollitia explicabo obcaecati, voluptate quod, quae debitis delectus! Hic tempore assumenda autem
+                laboriosam aperiam, error deserunt voluptates quos veritatis totam. Excepturi nemo voluptas fugiat
+                incidunt placeat similique aut recusandae asperiores!</p>
+        </div>
+    </div>
+
+    <button id="previous">Previous</button>
+    <button id="next">Next</button>
+    <script>
+        // Here we're going to move the active class between the slides. You can do this however you want, but for brevity I'm using JQuery.
+
+        // Get all the slides
+        var slides = $('.slide');
+
+        // Move the last slide before the first so the user is able to immediately go backwards
+        slides.first().before(slides.last());
+
+        $('button').on('click', function () {
+            // Get all the slides again
+            slides = $('.slide');
+            // Register button
+            var button = $(this);
+            // Register active slide
+            var activeSlide = $('.active');
+
+            // Next function
+            if (button.attr('id') == 'next') {
+                // Move first slide to the end so the user can keep going forward
+                slides.last().after(slides.first());
+                // Move active class to the right
+                activeSlide.removeClass('active').next('.slide').addClass('active');
+            }
+
+            // Previous function
+            if (button.attr('id') == 'previous') {
+                // Move the last slide before the first so the user can keep going backwards
+                slides.first().before(slides.last());
+                // Move active class to the left
+                activeSlide.removeClass('active').prev('.slide').addClass('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

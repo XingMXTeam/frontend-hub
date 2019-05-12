@@ -1,0 +1,16 @@
+<script src="../node_modules/vue/dist/vue.js"></script>
+<div id='app'>
+</div>
+
+<script type="module">
+  import counter from './counter.js';
+    new Vue({
+        el: '#app',
+        template: `<div>{{count}}</div>`,
+        data() {
+          return {
+            count: 0
+          }
+        }
+    })
+</script>

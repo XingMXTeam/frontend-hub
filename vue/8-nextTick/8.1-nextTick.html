@@ -11,6 +11,7 @@
     })
     vm.message = 'changed'
     console.log(vm.$el.textContent);
+    // Vuex已经更新了虚拟DOM，但是浏览器还未更新DOM到页面之前
     Vue.nextTick(function () {
         console.log(vm.$el.textContent);
     })

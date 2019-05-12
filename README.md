@@ -6,7 +6,7 @@
 
 Repo for all test demos. To understand everything in frontend.
 
-## ES6
+### ES6
 
 * promise
 * symbol
@@ -31,7 +31,7 @@ Repo for all test demos. To understand everything in frontend.
 * object
 * unicode
 
-## vue
+### vue
 
 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web
 

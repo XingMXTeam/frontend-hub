@@ -1,0 +1,18 @@
+<script>
+    const delayedLog = function (item) {
+        return new Promise((resolve, reject) => {
+            setTimeout(function () {
+                resolve(item)
+            }, 1000)
+        })
+    }
+    async function processArray(array) {
+        // 串行。本质上也是for循环。只不过是调用了array[Symbol.iterator]()
+        for (const item of array) {
+            let content = await delayedLog(item);
+            console.log(content)
+        }
+        console.log('Done!');
+    }
+    processArray([1, 2, 3, 5])
+</script>

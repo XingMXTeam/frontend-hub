@@ -1,0 +1,27 @@
+<script>
+    const getFilePaths = function () {
+        return new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                resolve(['file1', 'file2'])
+            }, 2000)
+        })
+    }
+    const readFile = function (file) {
+        return new Promise((resolve, reject) => {
+            setTimeout(function () {
+                resolve(file)
+            }, 2000)
+        })
+    }
+    async function printFiles() {
+        const files = await getFilePaths();
+        // async包裹相当于return Promise 
+        // 并行
+        await Promise.all(files.map(async (file) => {
+            const contents = await readFile(file)
+            console.log(contents)
+        }));
+        console.log(1111)
+    }
+    printFiles()
+</script>
