@@ -9,19 +9,8 @@ Front-End Knowledge is huge. This project is aimed to collect them
 and dumping them to your mind by hub.
 
 ### Hubs
-[ES6](./es6.md)
-[Vue](./vue.md)
+[ES6](./es6/README.md)
+[Vue](./vue/READE.md)
 
 
-### vue
 
-Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web
-
-* reactivity
-* plugin
-* render function
-* state management
-* routing
-* form-validation
-* i18n
-* nextTick
