@@ -1,35 +1,17 @@
-# FrontEndDemos
+# FrontEnd-Hub
 
 > Roma uno die non est condita.
 
 > 罗马不是一天建成的。
 
-Repo for all test demos. To understand everything in frontend.
+前端知识非常的庞杂。通过集装箱的方式收集所有知识点，构建扎实的基础体系。
+Front-End Knowledge is huge. This project is aimed to collect them
+and dumping them to your mind by hub.
 
-### ES6
+### Hubs
+[ES6](./es6.md)
+[Vue](./vue.md)
 
-* promise
-* symbol
-* iterator
-* generator
-* array
-* class
-* destructuring
-* map
-* reflect
-* set
-* object-literal
-* string
-* arrow
-* template-string
-* block-scope
-* rest-operation
-* spread
-* default-parameters
-* import
-* number
-* object
-* unicode
 
 ### vue
 
