@@ -4,16 +4,16 @@
 
 > 罗马不是一天建成的。
 
-前端知识非常的庞杂。通过集装箱的方式收集所有知识点，构建扎实的基础体系。
+前端知识非常的庞杂。通过集装箱的方式收集所有基础和高级知识点，让初学者构建扎实的前端基础体系。
 
-Front-End Knowledge is huge. This project is aimed to collect them
-and dumping them to your mind by hub.
+Front-End Knowledge is huge. This project is aimed to collect the basic and advanced 
+knowledge for beginners.
 
 ### Hubs
 
-[ES6](./es6/README.md)
+[ES6](./es6/readme.md)
 
-[Vue](./vue/READE.md)
+[Vue](./vue/readme.md)
 
 
 
