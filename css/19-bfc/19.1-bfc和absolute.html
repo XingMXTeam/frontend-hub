@@ -1,0 +1,18 @@
+<div id="box">
+    <span class="child"></span>
+</div>
+
+<style>
+    /* 没有高度 */
+    #box {
+        background: olive;
+        /*   bfc */
+        overflow: hidden;
+    }
+
+    #box .child {
+        margin: 50%;
+        background: blue;
+        position: absolute;
+    }
+</style>

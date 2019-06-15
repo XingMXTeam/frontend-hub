@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box"></div>
+    <button id="btn">click</button>
+    <script>
+        let box = document.querySelector('#box')
+        let btn = document.querySelector('#btn')
+        btn.addEventListener('click', function () {
+            box.style.transform = "translateX(1000px)";
+            box.style.transition = "transform 1s";
+            requestAnimationFrame(nil => {
+                requestAnimationFrame(nil => {
+                    box.style.transform = "translateX(500px)"
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

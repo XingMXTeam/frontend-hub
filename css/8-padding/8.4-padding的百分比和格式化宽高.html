@@ -1,0 +1,21 @@
+<style>
+    .parent {
+        padding: 10% 50%;
+        background: red;
+        position: relative;
+    }
+
+    /* 这里必须采用格式化宽高。保证按照父元素的比例 */
+    #child {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: blue;
+    }
+</style>
+<div class="parent">
+    <div id="child">asdfasdf</div>
+    <!-- <img id="child" src="//edu-image.nosdn.127.net/51373455cc3e4a96a802e89387cb868c.png?imageView&quality=100" alt=""> -->
+</div>

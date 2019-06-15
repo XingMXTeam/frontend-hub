@@ -1,0 +1,9 @@
+body {
+    background: red;
+    font-size: 12px;
+}
+
+.test {
+    width: 100vw;
+    height: 100vh;
+}

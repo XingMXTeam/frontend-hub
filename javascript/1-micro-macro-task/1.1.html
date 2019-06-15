@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const messages = [];
+        setTimeout(() => {
+            // Schedule a microtask
+            Promise.resolve().then(() => {
+                log("microtask");
+            });
+
+            // Schedule animation frame callback
+            requestAnimationFrame(() => {
+                log("requestAnimationFrame");
+            });
+
+            // Schedule a macrotask
+            setTimeout(() => {
+                log("macrotask");
+            }, 0);
+
+            // Schedule a callback to dump the messages
+            setTimeout(() => {
+                messages.forEach(msg => {
+                    console.log(msg);
+                });
+            }, 200);
+
+            // Busy-wait for a 10th of a second; the browser will be eager to repaint when this task completes
+            const stop = Date.now() + 100;
+            while (Date.now() < stop) {}
+
+        }, 100);
+
+        function log(msg) {
+            messages.push(Date.now() + ": " + msg);
+        }
+    </script>
+</body>
+
+</html>

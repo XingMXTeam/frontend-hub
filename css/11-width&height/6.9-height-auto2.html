@@ -1,22 +1,19 @@
 <div class="box">
     <a href="javascript:" class="prev" title="上一张">上一张</a>
     <a href="javascript:" class="next" title="下一张">下一张</a>
-    <img src="/images/common/l/1.jpg">
+    <img src="../asset/1.jpeg">
 </div>
 <style>
     .box {
         display: inline-block;
-        position: relative;
+        /* position: relative; */
     }
 
     .prev,
     .next {
         width: 50%;
-        /* 高度100% 相对于padding-box */
         height: 100%;
-        position: absolute;
-        top: 0;
-        opacity: .5;
+        display: inline-block;
     }
 
     .prev {
