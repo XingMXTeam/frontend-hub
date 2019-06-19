@@ -11,7 +11,7 @@
 // }
 import css from './index.css'
 
-import Icon from '../asset/a.jpg';
+import Icon from '../asset/banner.png';
 
 function component() {
     let element = document.createElement('div');
