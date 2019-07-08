@@ -4,12 +4,21 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "webpack-dev-server --open",
+    "build": "webpack --config webpack.config.js -p"
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
+    "angular": "^1.7.8",
+    "angular-ui-router": "^1.0.22",
     "react": "^16.8.6",
-    "react-loadable": "^5.5.0"
+    "react-dom": "^16.8.6",
+    "react-loadable": "^5.5.0",
+    "react-router-dom": "^5.0.1",
+    "react-transition-group": "^4.1.1",
+    "single-spa-angularjs": "^3.0.1",
+    "single-spa-react": "^2.10.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
