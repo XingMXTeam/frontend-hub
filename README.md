@@ -14,7 +14,7 @@ Front-End Knowledge is huge. This project is aimed to collect the basic and adva
 
 [Vue](./vue/readme.md)
 
-[TypeScript](./typescript/readme.md
+[TypeScript](./typescript/readme.md)
 
 
 
