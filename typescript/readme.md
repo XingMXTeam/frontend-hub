@@ -1,5 +1,9 @@
 # 关键点
 
+## 关键字interface
+
+## declare 
+
 ## <>
 
 一个是模版 ```<T>```
@@ -104,26 +108,9 @@ function fixed(name: string | null): string {
 
 ## 类型别名
 
-``` ts
-type Name = string;
-type NameResolver = ()=>string;
-function getName(n: NameResolver): Name {  }
-// 类型别名也可以是泛型
-type Container<T> = { value: T }
-type Tree<T> = {
-    value: T;
-    left: Tree<T>;
-    right: Tree<T>;
-}
-type LinkedList<T> = T & { next: LinkedList<T> };
-interface Person {
-    name: string
-}
-var people: LinkeList<Person>;
-var s=people.name;
-var s=people.next.name;
-// 类型别名不能出现在声明右侧的任何地方
+type 
+应该尽量使用接口，而不是别名。软件对于扩展是开放的，对于修改是封闭的。
 
-```
+## 
 
 
