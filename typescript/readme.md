@@ -18,11 +18,24 @@
 
 必须在声明或者构造函数被初始化
 
-## 声明和初始化放在一起
-
 ``` ts
-constructor(readonly/public/private name: string){}
+class Test {
+    readonly name: string = 1;
+    constructor(readonly name: string) {} //声明的同时初始化
+}
+
+interface Test {
+    readonly name: string;
+}
 ```
+
+const 必须初始化
+
+readonly和const的区别：
+const是一个编译期常量， readonly是一个运行时常量</li>
+const只能声明基元类型，枚举类型，字符串类型。readonly则无限制
+const天生为静态数据，无需再添加static标识
+readonly是运行时变量，只能赋值一次。特例是可以定义时赋值一次，构造函数中再赋值一次
 
 ## 交叉类型
 
@@ -111,6 +124,47 @@ function fixed(name: string | null): string {
 type 
 应该尽量使用接口，而不是别名。软件对于扩展是开放的，对于修改是封闭的。
 
+## never
+
+``` ts
+function assertNever(x: never): never {
+    throw new Error("Unexpected object: " + x);
+}
+function area(s: Shape) {
+    switch (s.kind) {
+        case "square": return s.size * s.size;
+        case "rectangle": return s.height * s.width;
+        case "circle": return Math.PI * s.radius ** 2;
+        default: return assertNever(s); // error here if there are missing cases
+    }
+}
+```
+
+## keyof
+
+``` ts
+function plunk(o, name) {
+    return names.map(n => o[n])
+}
+// 索引类型查询:keyof T => 'name' | 'age'
+// 索引访问: T[K]
+
+// 会帮你检查是否是有的属性名
+function pluck<T, K extends keyof T>(o: T, names: K[]): T[K][] {
+    return names.map(n=>o[n])
+}
+
+function getProperty<T, K extends keyof T>(o: T, name: K): T[K] {
+    return o[name]; // o[name] is of type T[K]
+}
+
+// 索引类型和字符串索引签名
+interface Map<T> {
+    [key: string]: T
+}
+
+let keys: keyof Map<number>;
+let value: Map<number>['foo']; 
+```
+
 ## 
-
-
